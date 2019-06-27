@@ -1,22 +1,34 @@
-#o(log n) or o(n)
-
 class Node:
     def __init__(self, info):
-        self.info = info
-        self.left = None
-        self.right = None
-        self.level = None
+        self.info = info  
+        self.left = None  
+        self.right = None 
+        self.level = None 
 
     def __str__(self):
-        return str(self.info)
+        return str(self.info) 
 
+def preOrder(root):
+    if root == None:
+        return
+    print (root.info, end=" ")
+    preOrder(root.left)
+    preOrder(root.right)
+    
 class BinarySearchTree:
-    def __init__(self):
+    def __init__(self): 
         self.root = None
 
-    def create(self, val):
+#Node is defined as
+#self.left (the left child of the node)
+#self.right (the right child of the node)
+#self.info (the value of the node)
+
+    def insert(self, val):
+        #Enter you code here.
         if self.root == None:
             self.root = Node(val)
+            return self.root
         else:
             current = self.root
             while True:
@@ -34,29 +46,14 @@ class BinarySearchTree:
                         break
                 else:
                     break
-
-def search(root,key):
-    if root == None:
-        return False
-    if root.info== key:
-        return True
-    if root.info > key:
-        return search(root.left,key)
-    else:
-        return search(root.right,key)
-
+            return self.root
 
 tree = BinarySearchTree()
 t = int(input())
 
-arr = list(map(int,input().split()))
+arr = list(map(int, input().split()))
 
 for i in range(t):
-    tree.create(arr[i])
+    tree.insert(arr[i])
 
-key = int(input())
-if(search(tree.root,key)):
-    print("Hurry, it is in the tree.")
-else:
-    print("sorry, there is no such element.")
-
+preOrder(tree.root)

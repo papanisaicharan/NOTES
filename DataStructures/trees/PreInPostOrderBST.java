@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-
+//o(log n) or o(n)
 class Node{
 	Node left;
 	Node right;

@@ -1,3 +1,4 @@
+#o(log n) or o(n)
 class Node:
 	def __init__(self, info):
 		self.info = info
