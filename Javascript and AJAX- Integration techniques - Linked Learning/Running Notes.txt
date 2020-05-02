@@ -1,0 +1,17 @@
+How AJAX Works:
+    Asynchronous Javascript and XML = AJAX
+    requests without reload
+    Javascript for heavy liftng
+    talks to server through XHR(API)
+
+what XHR isn't:
+    Not XML 
+    AJAX request can be any format:
+        Text file
+        HTML
+        JSON Object
+
+https://caniuse.com/
+
+https://www.w3schools.com/tags/ref_eventattributes.asp
+

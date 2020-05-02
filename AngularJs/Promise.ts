@@ -48,3 +48,28 @@ let promise1 = Promise.resolve("resolve")
 ).catch(
     (err) => console.log(err)
 )
+
+// ---------------------------4/29/2019----------------------------------
+// unfortunatly, I have gone through this and try to clear it up
+
+let item = {
+    name: 'saicharan',
+    marks: 24,
+    rank: null
+}
+
+console.log(item.name);
+//safe-operator
+console.log(item?.name);
+console.log(item.rank);
+console.log(item?.rank);
+
+//?: -> is optional variable used in a class declaration
+class Ram{
+    storage?: number;
+    name: string
+}
+
+//? : ternary operator
+
+//-----------------------------------------------------------------------
